@@ -51,6 +51,15 @@ const newnum = [1,2,3,4,5,6,7,8,9,1,10]
 const lnum = newnum.filter((num)=> num>2)//bhai isne to condition bhi lga di 
     console.log( `ye hai dekh ${lnum}`)
 
+/////////////////////////////////////////////
+const ekmap = [1,2,3,4,8,9,7,5]
+ekmap.map((item,index)=>{
+    console.log(`items is ${item},index are ${index}`)
+})
 
 
 
+
+let kiran = ekmap.map(num => num * 10)
+    .map(num => num + 1)
+    .filter(num => num >= 40);
