@@ -1,0 +1,11 @@
+name: Karan Pal
+age: 21
+is_student: true
+skills:
+  - HTML
+  - CSS
+  - JavaScript
+education:
+  college: ABC University
+  course: B.Tech CSE
+  year: 3rd
