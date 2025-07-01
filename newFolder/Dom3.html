@@ -11,6 +11,12 @@
         console.log(div);
         div.className = 'main'
         div.id = Math.round(Math.random() * 10 + 1)
+        div.setAttribute('title', 'Karan');
+        div.style.backgroundColor = 'red';
+        div.style.padding = '20px';
+        const addText = document.createTextNode('Karan Singh Pal');
+        div.appendChild(addText);
+        document.body.appendChild(div);
     </script>
 </body>
 </html>
