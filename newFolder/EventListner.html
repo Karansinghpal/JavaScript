@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body style="background-color: rgb(3, 3, 3);">
+    <ul id="images">
+        <li> <img width="100px" id="japan" src="https://images.pexels.com/photos/32801872/pexels-photo-32801872.jpeg" alt=""></li>
+        <li> <img width="100px" id="rain" src="https://images.pexels.com/photos/975771/pexels-photo-975771.jpeg" alt=""></li>
+        <li> <img width="100px" id="mountain" src="https://images.pexels.com/photos/913215/pexels-photo-913215.jpeg" alt=""></li>
+        <li> <img width="100px" id="forest" src="https://images.pexels.com/photos/1250260/pexels-photo-1250260.jpeg" alt=""></li>
+        <li> <img width="100px" id="beach" src="https://images.pexels.com/photos/1231234/pexels-photo-1231234.jpeg" alt=""></li>
+        <li> <img width="100px" id="city" src="https://images.pexels.com/photos/1231235/pexels-photo-1231235.jpeg" alt=""></li>
+        <li> <img width="100px" id="desert" src="https://images.pexels.com/photos/1231236/pexels-photo-1231236.jpeg" alt=""></li>
+        <li> <img width="100px" id="river" src="https://images.pexels.com/photos/1231237/pexels-photo-1231237.jpeg" alt=""></li>
+        <li> <img width="100px" id="lake" src="https://images.pexels.com/photos/1231238/pexels-photo-1231238.jpeg" alt=""></li>
+
+    </ul>
+</body>
+<script>
+// document.getElementById("images").addEventListener('click', function(e) {
+//     // alert("Japan is clicked");
+//     console.log("Clicked inside of ul");
+   
+// },true);// true for capturing phase
+// document.getElementById('rain').addEventListener('click', function(e) {
+//     alert("rain is clicked");
+//     console.log("clicked on rain");
+   
+// },false);// false for bubbling phase
+
+document.querySelector('#images').addEventListener('click', function(e) {
+    // alert("Image is clicked");
+    console.log(e.target.parentNode);
+    console.log(e.target.tagName);
+    if(e.target.tagName === 'IMG') {
+        console.log(e.target.parentNode.remove())
+        
+        alert("Image removed");
+    } else {
+        
+    console.log(e.target.parentNode);
+        
+        alert("Not an image");
+    }
+    
+    
+})
+
+</script>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="language">
+        <li> JavasCRIPT</li>
+
+    </ul>
+
+</body style="background-color: black; color: white;">
+<script>
+    // function addlanguage( langName){
+    //     const li = document.createElement('li');
+    //     li.innerHTML = `${langName}`;
+    //     document.querySelector('.language').appendChild(li);
+    // }
+    function addlang(langName){//this is how to create a function js and how to make elements in js we can add and append elements in js
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(langName));
+        document.querySelector('.language').appendChild(li);
+    }
+    addlang('HTML');
+    addlang('CSS');
+    addlang('Python');
+    ///Understand how to edit elements in js
+    const Editelement = document.querySelector('li:nth-child(2)');
+    Editelement.innerHTML = 'REACT APP'; //this is how to edit elements in
+
+    //Edit outer elements in js
+    const outerElment = document.querySelector('li:first-child');
+    outerElment.outerHTML = '<li>Typescript</li>'; //this is how
+    
+
+    // Remove elements in js
+    const removeElement = document.querySelector('li:nth-child(3)');
+    removeElement.remove(); //this is how to remove elements in js
+</script>
+</html>
