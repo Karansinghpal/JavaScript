@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Karan</h1>
+    <button id="Start">Start</button>
+    <button id="Stop">Stop</button>
+</body>
+<script>
+const startBtn = document.querySelector('#Start');
+const stopBtn = document.querySelector('#Stop');
+let intervalId = null;
+
+
+const sayHi = () => {
+    console.log("Hii Karan");
+};
+
+startBtn.addEventListener('click', () => {
+    if (intervalId === null) {
+
+        intervalId = setInterval(sayHi, 1000);
+    }
+    console.log("Starting!........");
+});
+
+stopBtn.addEventListener('click', () => {
+    if (intervalId !== null) {
+        clearInterval(intervalId);
+        intervalId = null;
+    }
+    console.log("Stopping!........");
+});
+</script>
+</html>

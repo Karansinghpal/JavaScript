@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello Karan</h1>
+    <!-- //it will show in web page -->
+    <button id="stop">Stop</button>
+    <script>
+        setTimeout(function(){
+            console.log("Hello Karan");//and it will show in console
+        },3000);
+
+        document.querySelector('h1').addEventListener('click', function() {
+            console.log("Clicked");
+        });
+
+
+        document.querySelector('h1').innerHTML = "Change With Help Of InnerHtml";//HERE WE ARE CHANGING THE CONTENT OF H1 TAG
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
