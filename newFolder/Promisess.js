@@ -66,4 +66,7 @@ promisFour.then((user)=>{
     console.log(username);
 }).catch(function(error){
     console.log(error);
-})  
+}).finally(function() {
+    console.log("This will always execute");
+}
+);  
