@@ -46,6 +46,7 @@
 //     console.log(result.email);
 // });
 const promisFour = new Promise(function(resolve, reject) {
+    setTimeout(function() {
     let error = true
     if(!error){
         resolve({username: "Karan", age: 22, email: "kp5495423@gmail.com"})
@@ -53,10 +54,16 @@ const promisFour = new Promise(function(resolve, reject) {
         reject({"Error": "Unable to fetch user data"});
     }
 
-},2000)
+    }, 1000)
 
-
+})
 promisFour.then((user)=>{
     console.log(user);
-    return user.username;
-})
+    return user.username
+
+    
+}).then((username)=>{
+    console.log(username);
+}).catch(function(error){
+    console.log(error);
+})  
